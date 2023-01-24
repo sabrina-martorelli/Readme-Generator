@@ -36,7 +36,7 @@ ${data.contributing}
     - ${data.tests}
 
 ##  Questions
- My GitHub profile is: [${data.username} ](${data.username}). Please follow.\n
+ My GitHub profile is: [https://github.com/${data.username}/ ](https://github.com/${data.username}/). Please follow.\n
  Additional questions? Please contact me [${data.address} ](${data.address}).`;
 }
 
