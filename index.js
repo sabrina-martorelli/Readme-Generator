@@ -32,6 +32,12 @@ const questions = [
         message: 'What license should your project have?',
         choices: ['Apache 2.0 License', 'GNU GPL v3', 'MIT','Mozilla','None'],
     },
+    {
+        type: 'input',
+        name: 'fullname',
+        message: 'Please enter your full name to include on the license:',
+       
+    },
     
     {
         type: 'input',

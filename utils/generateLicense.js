@@ -61,7 +61,8 @@ function generateLicense(license, username) {
 
         case 'None':
             licenseBadge = '';
-            licenseText = 'None';
+            licenseText = `None    
+            Copyright &copy; ${year} ${username}`;
             break;
     };
 
