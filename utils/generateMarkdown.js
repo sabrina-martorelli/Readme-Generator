@@ -1,8 +1,12 @@
+
+const generateLicense = require("./generateLicense");
+
 // function to generate markdown for README
 function generateMarkdown(data) {
   
-const license = generateLicense(data);
-  
+const license = generateLicense(data.license, data.username);
+
+
 return `# ${data.title}
 ${license[0]}
 
