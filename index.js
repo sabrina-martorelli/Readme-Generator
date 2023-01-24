@@ -3,7 +3,7 @@ const path = require('path');
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
-const fileName = 'README';
+const fileName = 'README.md';
 // array of questions for user
 const questions = [
     {
@@ -46,12 +46,12 @@ const questions = [
     {
         type: 'input',
         name: 'username',
-        message: 'Please enter your GitHub username',
+        message: 'Please enter your GitHub username:',
     },
     {
         type: 'input',
         name: 'address',
-        message: 'Please enter your email address?',
+        message: 'Please enter your email address:',
     }
 
 ];
