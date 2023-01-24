@@ -18,25 +18,50 @@ function init() {
 
     inquirer.prompt([
         {
-          //  type: 'input',
-            name: 'name',
-            message : 'Please enter your name:',
+            type: 'input',
+            name: 'title',
+            message : 'What is the title of your project?:',
         },
         {
-          //  type: 'input',
-            name: 'age',
-            message : 'Please enter your age:',
+            type: 'input',
+            name: 'description',
+            message : 'Please write a description for your project:',
+        },
+        {
+            type: 'input',
+            name: 'installation',
+            message : 'What command should be run to install dependencies?',
+        },
+        {
+            type: 'input',
+            name: 'usage',
+            message : 'What the user need to know about using this project?',
         },
         {
             type: 'list',
-              name: 'option',
-              message : 'Please enter your type choice:',
-              choices: ['one', 'two', 'three'],
+              name: 'license',
+              message : 'What kind of license should your project have?',
+              choices: ['MIT', 'GNU', 'None'],
           },
+          {
+            type: 'input',
+            name: 'contributing',
+            message : 'What the user need to know about contributing to this project?',
+        },
         {
-          //  type: 'input',
-            name: 'type',
-            message : 'Please enter the command :',
+            type: 'input',
+            name: 'test',
+            message : 'What command should be run to tests?',
+        },
+        {
+            type: 'input',
+            name: 'username',
+            message : 'What is your GitHub username?',
+        },
+        {
+            type: 'input',
+            name: 'address',
+            message : 'What is your email address?',
         }
     
       ])
