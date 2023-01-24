@@ -69,13 +69,13 @@ ${data.description}
 ${licenseBadge}
 
 ## Table of Contents 
-      [Description](#description) 
-      *[Installation](#installation) 
-      * Usage 
-      * License 
-      * Contributing 
-      * Tests 
-      * Questions
+      [Description] (#description) 
+      [Installation] (#installation) 
+      [Usage] (#Usage)
+      [License] (#License)
+      [Contributing] (#Contributing)
+      [Tests] (#Tests)
+      [Questions] (#Questions)
 
 ##  Installation 
 
