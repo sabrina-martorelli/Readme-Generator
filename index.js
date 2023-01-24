@@ -59,8 +59,17 @@ const questions = [
 function writeToFile(fileName, data) {
     
     const markdownText = generateMarkdown(data);
-    
 
+    //creates file using markdownText
+    
+   
+    fs.writeFile(fileName, markdownText, (error) => {
+  
+        if (error)  {
+         return  console.error(error.message);
+        }
+        
+        });
 
 }
 
