@@ -8,8 +8,8 @@ return `# ${data.title}
 ${data.description}
 
 ## Table of Contents 
-      - [Description](#description) 
-      * - [Installation](#installation) 
+      [Description](#description) 
+      *[Installation](#installation) 
       * Usage 
       * License 
       * Contributing 
@@ -17,7 +17,9 @@ ${data.description}
       * Questions
 
 ##  Installation 
-${data.installation}
+
+     - ${data.installation}
+
 ##  Usage 
 ${data.usage}
 ##  License 
@@ -25,7 +27,9 @@ ${data.license}
 ##  Contributing 
 ${data.contributing}
 ##  Tests 
-${data.tests}
+
+    - ${data.tests}
+
 ##  Questions
 [Author GitHub ](${data.username})
 [Author email address ](${data.address})
