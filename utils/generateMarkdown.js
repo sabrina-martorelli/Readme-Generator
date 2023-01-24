@@ -8,7 +8,7 @@ function generateMarkdown(data) {
     case 'Apache 2.0 License':
       
     licenseBadge ='[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
-    licenseText =`Copyright 2023 ${data.username}
+    licenseText =`Copyright 2023 ${data.username} \n
       Licensed under the Apache License, Version 2.0 (the "License");
       you may not use this file except in compliance with the License.
       You may obtain a copy of the License at
@@ -23,7 +23,9 @@ function generateMarkdown(data) {
       break;
     case 'GNU GPL v3':
        licenseBadge ='[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
-       licenseText =` Copyright (C) 2023 ${data.username}
+       licenseText =`
+       
+      Copyright (C) 2023 ${data.username} \n
 
       This program is free software: you can redistribute it and/or modify
       it under the terms of the GNU General Public License as published by
@@ -40,8 +42,7 @@ function generateMarkdown(data) {
       break;
     case 'MIT':
        licenseBadge ='[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
-       licenseText =`Copyright 2023 ${data.username}
-
+       licenseText =`Copyright 2023 ${data.username} \n
       Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
       
       The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
@@ -90,11 +91,9 @@ ${data.contributing}
     - ${data.tests}
 
 ##  Questions
- My GitHub profile is:[${data.username} ](${data.username}) . Please follow. 
+ My GitHub profile is:[${data.username} ](${data.username}) . Please follow.\n
  Additional questions? Please contact me[${data.address} ](${data.address}).
-
-
- `;
+`;
 }
 
 module.exports = generateMarkdown;
