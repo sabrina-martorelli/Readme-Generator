@@ -15,11 +15,11 @@ ${data.description}
 ## Table of Contents   
   - [Description](#description) 
   - [Installation](#installation) 
-  - [Usage](#Usage)
-  - [License](#License)
-  - [Contributing](#Contributing)
-  - [Tests](#Tests)
-  - [Questions](#Questions)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
 
 ##  Installation 
 
