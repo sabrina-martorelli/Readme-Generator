@@ -73,7 +73,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Walkthrough video link
 
-[Recording link](https://drive.google.com/file/d18PPzE9m8FGdDYVpZeOXw6HU-9IJa4BNp/view)
+https://drive.google.com/file/d/18PPzE9m8FGdDYVpZeOXw6HU-9IJa4BNp/view
 
 
 ## README.md file example
