@@ -61,7 +61,7 @@ function writeToFile(fileName, data) {
     const markdownText = generateMarkdown(data);
 
     //creates file using markdownText
-    
+
    
     fs.writeFile(fileName, markdownText, (error) => {
   
@@ -70,6 +70,7 @@ function writeToFile(fileName, data) {
         }
         
         });
+        
 
 }
 
