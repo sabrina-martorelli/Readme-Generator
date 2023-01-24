@@ -6,38 +6,40 @@ function generateMarkdown(data) {
   
 const license = generateLicense(data.license, data.username);
 
-return `# ${data.title}
-${license[0]}
+return `${license[1]}`
 
-## Description
-${data.description}
+// return `# ${data.title}
+// ${license[0]}
 
-## Table of Contents   
-  - [Description](#description) 
-  - [Installation](#installation) 
-  - [Usage](#usage)
-  - [License](#license)
-  - [Contributing](#contributing)
-  - [Tests](#tests)
-  - [Questions](#questions)
+// ## Description
+// ${data.description}
 
-##  Installation 
+// ## Table of Contents   
+//   - [Description](#description) 
+//   - [Installation](#installation) 
+//   - [Usage](#usage)
+//   - [License](#license)
+//   - [Contributing](#contributing)
+//   - [Tests](#tests)
+//   - [Questions](#questions)
 
-     - ${data.installation}
+// ##  Installation 
 
-##  Usage 
-${data.usage}
-##  License 
-${license[1]}
-##  Contributing 
-${data.contributing}
-##  Tests 
+//      - ${data.installation}
 
-    - ${data.tests}
+// ##  Usage 
+// ${data.usage}
+// ##  License 
+// ${license[1]}
+// ##  Contributing 
+// ${data.contributing}
+// ##  Tests 
 
-##  Questions
- My GitHub profile is: [${data.username} ](${data.username}). Please follow.\n
- Additional questions? Please contact me [${data.address} ](${data.address}).`;
+//     - ${data.tests}
+
+// ##  Questions
+//  My GitHub profile is: [${data.username} ](${data.username}). Please follow.\n
+ //Additional questions? Please contact me [${data.address} ](${data.address}).`;
 }
 
 module.exports = generateMarkdown;
