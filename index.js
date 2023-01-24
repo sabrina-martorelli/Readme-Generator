@@ -2,9 +2,9 @@ const fs = require("fs");
 const path = require('path');
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
-
 const fileName = 'README.md';
-// array of questions for user
+
+// Array of questions for user
 const questions = [
     {
         type: 'input',
@@ -30,15 +30,15 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'What license should your project have?',
-        choices: ['Apache 2.0 License', 'GNU GPL v3', 'MIT','Mozilla','None'],
+        choices: ['Apache 2.0 License', 'GNU GPL v3', 'MIT', 'Mozilla', 'None'],
     },
     {
         type: 'input',
         name: 'fullname',
         message: 'Please enter your full name to include on the license:',
-       
+
     },
-    
+
     {
         type: 'input',
         name: 'contributing',
@@ -62,31 +62,24 @@ const questions = [
 
 ];
 
-// function to write README file
+// Function to write README file
 function writeToFile(fileName, data) {
-    
+
+    // Calls function to generate markdown text 
     const markdownText = generateMarkdown(data);
 
-    //creates file using markdownText
-
-   
+    //Creates file using markdownText
     fs.writeFile(fileName, markdownText, (error) => {
-  
-        if (error)  {
-         return  console.error(error.message);
-        }
-        
-        });
-
-
+        if (error) { return console.error(error.message); }
+    });
 }
 
-// function to initialize program
+// Function to initialize program
 function init() {
-
+    // Gets answers and calls to generate file
     inquirer.prompt(questions)
-    .then(data => {      
-            writeToFile (fileName, data)
+        .then(data => {
+            writeToFile(fileName, data)
             console.log('Thanks for using our README Generator');
         });
 }
@@ -94,5 +87,5 @@ function init() {
 
 
 
-// function call to initialize program
+// Function call to initialize program
 init();

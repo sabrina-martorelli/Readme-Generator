@@ -1,10 +1,13 @@
+
+//Function to choose correct text and badge link for chosen license
 function generateLicense(license, username) {
 
     let licenseBadge;
     let licenseText;
 
+    //Use of moment.js package to add current year to licenses
     const moment = require("moment");
-    const year = moment().format('YYYY');   
+    const year = moment().format('YYYY');
 
 
     switch (license) {
@@ -12,8 +15,8 @@ function generateLicense(license, username) {
 
             licenseBadge = '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
 
-            licenseText = 
-                        `Apache 2.0 License   
+            licenseText =
+                `Apache 2.0 License   
                         Copyright ${year} ${username}   
                         Licensed under the Apache License, Version 2.0 (the "License")
                         you may not use this file except in compliance with the License.
@@ -66,6 +69,7 @@ function generateLicense(license, username) {
             break;
     };
 
+    //return array with badge link and text for chosen license
     return [licenseBadge, licenseText];
 
 }
