@@ -1,15 +1,14 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
 
-
-  const licenseBadge;
-  const licenseText;
-
+  let licenseBadge;
+  let licenseText;
+  
   switch (data.license) {
     case 'Apache 2.0 License':
       
     licenseBadge ='[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
-      licenseText =`   Copyright 2023 ${data.username}
+    licenseText =`Copyright 2023 ${data.username}
 
       Licensed under the Apache License, Version 2.0 (the "License");
       you may not use this file except in compliance with the License.
@@ -24,8 +23,8 @@ function generateMarkdown(data) {
       limitations under the License.`
       break;
     case 'GNU GPL v3':
-      licenseBadge ='[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
-      licenseText =` Copyright (C) 2023 ${data.username}
+       licenseBadge ='[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
+       licenseText =` Copyright (C) 2023 ${data.username}
 
       This program is free software: you can redistribute it and/or modify
       it under the terms of the GNU General Public License as published by
@@ -41,8 +40,8 @@ function generateMarkdown(data) {
       along with this program.  If not, see <https://www.gnu.org/licenses/>.`
       break;
     case 'MIT':
-      licenseBadge ='[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
-      licenseText =`Copyright 2023 ${data.username}
+       licenseBadge ='[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+       licenseText =`Copyright 2023 ${data.username}
 
       Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
       
@@ -51,18 +50,15 @@ function generateMarkdown(data) {
       THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`
       break;
     case 'Mozilla':
-      licenseBadge ='![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
-      licenseText =`This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.`
+       licenseBadge ='![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
+       licenseText =`This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.`
       break;
     case 'None':
-      licenseBadge ='None'
-      licenseText ='None'
+       licenseBadge ='None'
+       licenseText ='None'
       break;
-  }
+  };
   //choose badge license
-
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 
 
 return `# ${data.title}
@@ -70,7 +66,7 @@ return `# ${data.title}
 
 ## Description
 ${data.description}
-${licenseText}
+${licenseBadge}
 
 ## Table of Contents 
       [Description](#description) 
@@ -88,7 +84,7 @@ ${licenseText}
 ##  Usage 
 ${data.usage}
 ##  License 
-${licenseBadge}
+${licenseText}
 ##  Contributing 
 ${data.contributing}
 ##  Tests 
