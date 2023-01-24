@@ -36,9 +36,8 @@ ${data.contributing}
     - ${data.tests}
 
 ##  Questions
- My GitHub profile is: [${data.username} ](${data.username}) .Please follow.\n
- Additional questions? Please contact me [${data.address} ](${data.address}).
-`;
+ My GitHub profile is: [${data.username} ](${data.username}). Please follow.\n
+ Additional questions? Please contact me [${data.address} ](${data.address}).`;
 }
 
 module.exports = generateMarkdown;

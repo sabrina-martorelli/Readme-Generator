@@ -9,39 +9,39 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'What is the title of your project?:',
+        message: 'What is the title of your project?',
     },
     {
         type: 'input',
         name: 'description',
-        message: 'Please write a description for your project:',
+        message: 'Please write a description for your new project',
     },
     {
         type: 'input',
         name: 'installation',
-        message: 'What command should be run to install dependencies?',
+        message: 'What are the steps required to install your project?',
     },
     {
         type: 'input',
         name: 'usage',
-        message: 'What the user need to know about using this project?',
+        message: 'Please provide instructions and examples for use:',
     },
     {
         type: 'list',
         name: 'license',
-        message: 'What kind of license should your project have?',
+        message: 'What license should your project have?',
         choices: ['Apache 2.0 License', 'GNU GPL v3', 'MIT','Mozilla','None'],
     },
     
     {
         type: 'input',
         name: 'contributing',
-        message: 'What the user need to know about contributing to this project?',
+        message: 'Please provide guidelines for future contributors:',
     },
     {
         type: 'input',
         name: 'tests',
-        message: 'What command should be run to tests?',
+        message: 'Please provide examples on how to run tests:',
     },
     {
         type: 'input',
