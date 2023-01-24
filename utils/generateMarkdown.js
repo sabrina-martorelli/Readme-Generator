@@ -2,13 +2,14 @@
 function generateMarkdown(data) {
 
 return `# ${data.title}
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 ${data.description}
 
 ## Table of Contents 
-      * Description 
-      * Installation 
+      - [Description](#description) 
+      * - [Installation](#installation) 
       * Usage 
       * License 
       * Contributing 
@@ -26,8 +27,8 @@ ${data.contributing}
 ##  Tests 
 ${data.tests}
 ##  Questions
-[Author GitHub ]${data.username}
-[Author email address ]${data.address}
+[Author GitHub ](${data.username})
+[Author email address ](${data.address})
 
 
  `;
