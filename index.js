@@ -32,6 +32,7 @@ const questions = [
         message: 'What kind of license should your project have?',
         choices: ['Apache 2.0 License', 'GNU GPL v3', 'MIT','Mozilla','None'],
     },
+    
     {
         type: 'input',
         name: 'contributing',
@@ -45,12 +46,12 @@ const questions = [
     {
         type: 'input',
         name: 'username',
-        message: 'What is your GitHub username?',
+        message: 'Please enter your GitHub username',
     },
     {
         type: 'input',
         name: 'address',
-        message: 'What is your email address?',
+        message: 'Please enter your email address?',
     }
 
 ];
