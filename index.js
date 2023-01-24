@@ -5,6 +5,52 @@ const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
 const questions = [
+    {
+        type: 'input',
+        name: 'title',
+        message: 'What is the title of your project?:',
+    },
+    {
+        type: 'input',
+        name: 'description',
+        message: 'Please write a description for your project:',
+    },
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'What command should be run to install dependencies?',
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'What the user need to know about using this project?',
+    },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'What kind of license should your project have?',
+        choices: ['MIT', 'GNU', 'None'],
+    },
+    {
+        type: 'input',
+        name: 'contributing',
+        message: 'What the user need to know about contributing to this project?',
+    },
+    {
+        type: 'input',
+        name: 'test',
+        message: 'What command should be run to tests?',
+    },
+    {
+        type: 'input',
+        name: 'username',
+        message: 'What is your GitHub username?',
+    },
+    {
+        type: 'input',
+        name: 'address',
+        message: 'What is your email address?',
+    }
 
 ];
 
@@ -16,70 +62,22 @@ function writeToFile(fileName, data) {
 function init() {
 
 
-    inquirer.prompt([
-        {
-            type: 'input',
-            name: 'title',
-            message : 'What is the title of your project?:',
-        },
-        {
-            type: 'input',
-            name: 'description',
-            message : 'Please write a description for your project:',
-        },
-        {
-            type: 'input',
-            name: 'installation',
-            message : 'What command should be run to install dependencies?',
-        },
-        {
-            type: 'input',
-            name: 'usage',
-            message : 'What the user need to know about using this project?',
-        },
-        {
-            type: 'list',
-              name: 'license',
-              message : 'What kind of license should your project have?',
-              choices: ['MIT', 'GNU', 'None'],
-          },
-          {
-            type: 'input',
-            name: 'contributing',
-            message : 'What the user need to know about contributing to this project?',
-        },
-        {
-            type: 'input',
-            name: 'test',
-            message : 'What command should be run to tests?',
-        },
-        {
-            type: 'input',
-            name: 'username',
-            message : 'What is your GitHub username?',
-        },
-        {
-            type: 'input',
-            name: 'address',
-            message : 'What is your email address?',
-        }
-    
-      ])
-    
-    
-    .then(data => {
-        if (true) {  //LOOK AT THIS
-          
-            generateMarkdown();
-    
-        }
-    console.log('Thanks for using our api');
-    
-      });
-    }
+    inquirer.prompt(questions)
 
 
+        .then(data => {
+            if (true) {  //LOOK AT THIS
+
+                generateMarkdown();
+
+            }
+            console.log('Thanks for using our api');
+
+        });
 }
+
+
+
 
 // function call to initialize program
 init();
