@@ -3,6 +3,7 @@ const path = require('path');
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
+const fileName = 'README';
 // array of questions for user
 const questions = [
     {
@@ -56,23 +57,20 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
+    
+    const markdownText = generateMarkdown(data);
+    
+
+
 }
 
 // function to initialize program
 function init() {
 
-
     inquirer.prompt(questions)
-
-
-        .then(data => {
-            if (true) {  //LOOK AT THIS
-
-                generateMarkdown();
-
-            }
-            console.log('Thanks for using our api');
-
+    .then(data => {      
+            writeToFile (fileName, data)
+            console.log('Thanks for using our README Generator');
         });
 }
 
